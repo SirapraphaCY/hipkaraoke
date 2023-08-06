@@ -1,0 +1,10 @@
+header {
+    background-color: black;
+  }
+ 
+    footer{
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      background-color: #414a4f;
+  }

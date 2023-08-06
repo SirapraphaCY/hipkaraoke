@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+ul, nav{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.9;
+}
+a:hover{
+    opacity:1;
+}
+a.btn{
+    color: #fff;
+    border-radius:150px;
+    text-transform: uppercase;
+    /* background-color: #f8b92f; */
+    font-weight: 1000;
+    text-align: center;
+}
+hr{
+    width: 150px;
+    height: 2px;
+    background-color: #2196f3;
+    border: 0;
+    margin-bottom: 80px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 125px 100px;
+}
+/* ทำให้มัน Responsive */
+@media only screen and (max-width: 1000px) {
+    section{
+        padding: 100px 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section{
+        padding: 80px 30px;
+    }
+}
+/* ทำให้มัน Responsive */
+
+section h3.title{
+    color: #414a4f;
+    text-transform: capitalize;
+    font: bold 32px 'Kanit', sans-serif;
+    margin-bottom: 35px;
+    text-align: center;
+}
+section h3.about{
+    text-transform: capitalize;
+    font: bold 32px 'Kanit', sans-serif;
+    margin-bottom: 18px;
+    text-align: center;
+}
+section p{
+    color: #414a4f;
+    /* text-transform: capitalize; */
+    font: bold 18px 'Kanit', sans-serif;
+}
+/* section a{
+    font-family:;
+} */
+section p{
+    max-width:800px;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 2;
+}
+ul.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Header */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 35px 100px 0;
+}
+
+header nav{
+    display: flex;
+}
+header nav li{
+    margin: 0 15px;
+}
+header nav li:first-child{
+    margin-left: 0;
+}
+header nav li:last-child{
+    margin-right: 0;
+}
+@media only screen and (max-width: 1000px) {
+    header{
+        padding: 20px 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+    }
+    header h2{
+        margin-bottom: 15px;
+    }
+}
+
+/* Hip  Section */
+.hip{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+.hip .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #2196f3;
+    z-index: -1;
+}
+.hip .background-image:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #414a4f;
+    opacity: 0.75;
+}
+.hip h1{
+    font:  90px 'Julius Sans One', sans-serif;
+    margin-bottom: 15px
+}
+.hip h3{
+    font: bold 28px 'Kanit', sans-serif;
+    margin-bottom: 40px
+}
+.hip a.btn{
+    padding: 20px 45px;
+}
+@media only screen and (max-width: 800px) {
+    .hip{
+        min-height: 600px;
+    }
+   .hip h1{
+        font-size: 48px;
+    }
+    .hip h3{
+        font-size: 24px;
+    }
+    .hip a.btn{
+        padding: 15px 40px;
+    }
+}
+
+/* Our work section */
+.our-work{
+    background-color: #fff;
+}
+.our-work p{
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.our-work .grid li{
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+    
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+.our-work .grid li.small{
+    flex-basis: 40%;
+}
+.our-work .grid li.large{
+    flex-basis: 60%;
+}
+@media only screen and (max-width: 1000px) {
+    .our-work .grid li.small,
+    .our-work .grid li.large{
+        flex-basis: 100%;
+    }
+}
+
+/* Features */
+.features{
+    background-color: #f7f7f7;
+}
+.features .grid li{
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+.features .grid li h4{
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.features .grid li p{
+    margin: 0;
+}
+@media only screen and (max-width: 1000px) {
+    .features .grid li{
+        flex-basis:70%;
+        margin-bottom:65px;
+    }
+    .features .grid li:last-child{
+        margin-bottom: 0;
+    }
+}
+
+/* reviews */
+.reviews{
+    background-color: #fff;
+}
+.reviews .quote{
+    text-align: center;
+    width: 80%;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.reviews .author{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.reviews .author:last-child{
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 1000px) {
+    .reviews .quote{
+        font-size: 20px;
+    }
+    .reviews .author{
+        font-size: 16px;
+    }
+}
+/* contact */
+.contact{
+    background-color: #f7f7f7;
+}
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    max-width: 800px;
+    width: 80%;
+}
+
+.contact form input{
+    padding: 15px;
+    flex: 1;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #555;
+}
+.contact form btn{
+    padding: 18px 42px;
+}
+@media only screen and (max-width: 800px) {
+    .contact form input{
+        flex-basis: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #414a4f;
+    padding:10px 0;
+}
+
+
+/* เด้งหน้าเข้าสู่ระบบ modal */
+
+.modal-content{
+    background-color: transparent;
+   background-image: linear-gradient(rgb(245, 161, 5), rgb(250, 250, 250));
+}
